@@ -1,0 +1,2 @@
+DBschemaTool.exe -n FORMAL -p D:\SCMModel -c FormalConnection -ms
+DBschemaTool.exe -n TEMP -p D:\SCMModel -c TempConnection -ms
