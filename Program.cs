@@ -126,7 +126,7 @@ namespace DBschemaTool
                 AddColumn(returnLs, t);
                 AddMaxLength(returnLs, t);
                 AddKey(returnLs, t);
-                returnLs.Add($"        public {ConvertTypeMSSQL(t.DATA_TYPE)}{isNullable} {t.Column}  " + " { get; set; }");
+                returnLs.Add($"        public {ConvertTypeMSSQL(t.DATA_TYPE)}{isNullable} {t.Column}" + " { get; set; }");
                 returnLs.Add(string.Empty);
             }
 
