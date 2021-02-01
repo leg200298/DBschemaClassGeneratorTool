@@ -145,36 +145,36 @@ namespace DBschemaTool
 
         private static void AddColumn(List<string> returnLs, MsSQLTableDes t)
         {
-            returnLs.Add($"        [Column(\"{t.Column}\")] ");
+            returnLs.Add($"        [Column(\"{t.Column}\")]");
         }
 
         private static void AddSummary(List<string> returnLs, MsSQLTableDes t)
         {
-            returnLs.Add($"        ///<summary> ");
+            returnLs.Add($"        ///<summary>");
             if (!string.IsNullOrEmpty(t.Description))
             {
 
                 foreach (var s in t.Description.Split('\n'))
                 {
 
-                    returnLs.Add($"        /// {s.Trim()} ");
+                    returnLs.Add($"        /// {s.Trim()}");
                 }
             }
             else
             {
-                returnLs.Add($"        /// ");
+                returnLs.Add($"        ///");
             }
-            returnLs.Add($"        /// </summary> ");
+            returnLs.Add($"        /// </summary>");
         }
 
         private static void AddKey(List<string> returnLs, MsSQLTableDes t)
         {
-            if (t.IsKey) { returnLs.Add($"        [Key] "); }
+            if (t.IsKey) { returnLs.Add($"        [Key]"); }
         }
 
         private static List<string> FillOutputModel(List<string> outputModel, string spname)
         {
-            outputModel.Insert(0, $"using System; ");
+            outputModel.Insert(0, $"using System;");
             outputModel.Insert(1, $"using System.Collections.Generic;");
             outputModel.Insert(2, $"using System.ComponentModel.DataAnnotations;");
             outputModel.Insert(3, $"using System.ComponentModel.DataAnnotations.Schema;");
@@ -192,7 +192,7 @@ namespace DBschemaTool
         private static List<string> CleanString(IEnumerable<string> temp, string spname)
         {
             List<string> returnLs = new List<string>();
-            returnLs.Add($"using System; ");
+            returnLs.Add($"using System;");
             returnLs.Add($"using System.Collections.Generic;");
             returnLs.Add($"using System.ComponentModel.DataAnnotations;");
             returnLs.Add($"using System.ComponentModel.DataAnnotations.Schema;");
