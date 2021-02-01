@@ -150,7 +150,7 @@ namespace DBschemaTool
 
         private static void AddSummary(List<string> returnLs, MsSQLTableDes t)
         {
-            returnLs.Add($"        ///<summary>");
+            returnLs.Add($"        /// <summary>");
             if (!string.IsNullOrEmpty(t.Description))
             {
 
